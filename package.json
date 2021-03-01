@@ -1,0 +1,30 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --out-dir ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/optimizer-cssnano": "^2.0.0-nightly.598",
+    "@parcel/optimizer-htmlnano": "^2.0.0-nightly.598",
+    "@parcel/packager-css": "^2.0.0-nightly.598",
+    "@parcel/packager-html": "^2.0.0-nightly.598",
+    "@parcel/transformer-css": "^2.0.0-nightly.598",
+    "@parcel/transformer-html": "^2.0.0-nightly.598",
+    "@parcel/transformer-postcss": "^2.0.0-nightly.598",
+    "@parcel/transformer-posthtml": "^2.0.0-nightly.598",
+    "@parcel/transformer-sass": "^2.0.0-nightly.598",
+    "postcss": "^8.2.6"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "fractional": "^1.0.0",
+    "parcel": "^1.12.4",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
