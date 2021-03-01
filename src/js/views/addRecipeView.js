@@ -1,42 +1,45 @@
-import View from './view.js';
+import View from './View.js';
+import icons from 'url:../../img/icons.svg'; // Parcel 2
 
-class BookmarksView extends View {
+class AddRecipeView extends View {
+  _parentElement = document.querySelector('.upload');
+  _message = 'Recipe was successfully uploaded :)';
+
+  _window = document.querySelector('.add-recipe-window');
+  _overlay = document.querySelector('.overlay');
+  _btnOpen = document.querySelector('.nav__btn--add-recipe');
+  _btnClose = document.querySelector('.btn--close-modal');
+
   constructor() {
     super();
-    this._parentEl = document.querySelector('.upload');
-    this._window = document.querySelector('.add-recipe-window');
-    this._overlay = document.querySelector('.overlay');
-    this._btnOpen = document.querySelector('.nav__btn--add-recipe');
-    this._btnClose = document.querySelector('.btn--close-modal');
-    this._btnUpload = document.querySelector('.upload__btn');
-    this._message = 'Recipe was successfully uploaded!';
-
-    this._addHandlerOpenModal();
-    this._addHandlerCloseModal();
+    this._addHandlerShowWindow();
+    this._addHandlerHideWindow();
   }
-  openCloseModal() {
-    this._window.classList.toggle('hidden');
+
+  toggleWindow() {
     this._overlay.classList.toggle('hidden');
+    this._window.classList.toggle('hidden');
   }
 
-  _addHandlerOpenModal() {
-    this._btnOpen.addEventListener('click', this.openCloseModal.bind(this));
+  _addHandlerShowWindow() {
+    this._btnOpen.addEventListener('click', this.toggleWindow.bind(this));
   }
 
-  _addHandlerCloseModal() {
-    this._btnClose.addEventListener('click', this.openCloseModal.bind(this));
-    this._overlay.addEventListener('click', this.openCloseModal.bind(this));
+  _addHandlerHideWindow() {
+    this._btnClose.addEventListener('click', this.toggleWindow.bind(this));
+    this._overlay.addEventListener('click', this.toggleWindow.bind(this));
   }
 
   addHandlerUpload(handler) {
-    this._parentEl.addEventListener('submit', function (e) {
+    this._parentElement.addEventListener('submit', function (e) {
       e.preventDefault();
       const dataArr = [...new FormData(this)];
       const data = Object.fromEntries(dataArr);
       handler(data);
     });
   }
+
   _generateMarkup() {}
 }
 
-export default new BookmarksView();
+export default new AddRecipeView();

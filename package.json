@@ -1,30 +1,21 @@
 {
-  "name": "starter",
+  "name": "forkify",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Recipe application",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --out-dir ./dist"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
-  "author": "",
+  "author": "Jonas Schedtmann",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/optimizer-cssnano": "^2.0.0-nightly.598",
-    "@parcel/optimizer-htmlnano": "^2.0.0-nightly.598",
-    "@parcel/packager-css": "^2.0.0-nightly.598",
-    "@parcel/packager-html": "^2.0.0-nightly.598",
-    "@parcel/transformer-css": "^2.0.0-nightly.598",
-    "@parcel/transformer-html": "^2.0.0-nightly.598",
-    "@parcel/transformer-postcss": "^2.0.0-nightly.598",
-    "@parcel/transformer-posthtml": "^2.0.0-nightly.598",
-    "@parcel/transformer-sass": "^2.0.0-nightly.598",
-    "postcss": "^8.2.6"
+    "parcel": "^2.0.0-beta.1",
+    "sass": "^1.26.10"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
+    "core-js": "^3.6.5",
     "fractional": "^1.0.0",
-    "parcel": "^1.12.4",
     "regenerator-runtime": "^0.13.7"
   }
 }
