@@ -19,7 +19,8 @@
     "@parcel/transformer-postcss": "^2.0.0-nightly.598",
     "@parcel/transformer-posthtml": "^2.0.0-nightly.598",
     "@parcel/transformer-sass": "^2.0.0-nightly.598",
-    "postcss": "^8.2.6"
+    "postcss": "^8.2.6",
+    "sass": "^1.32.8"
   },
   "dependencies": {
     "core-js": "^3.8.3",
